@@ -1,9 +1,9 @@
-PHP Rich Content Embedder
+PHP URL Previewer
 ====================================
 
-This plugin will embed the rich content from any 3rd party site into your website. This will scrape the content from the provided URL and fetch all the below listed fields. 
+This plugin will embed the rich content from any 3rd party site into your website and will show as a Preview. This will scrape the content from the provided URL and fetch all the below listed fields. 
 
-This is similar to Facebook wall URL posting feature, where user entered URL will be used to fetch Rich Content from the site and embed into Facebook wall.
+This is similar to Facebook wall URL Preview feature, where user entered URL will be used to fetch Rich Content from the site and a preview of the site will be shown immediately.
 
 
 Dynamic Rich Content
