@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>URL Parsing</title>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+
+<style>
+	* {margin:0px}
+	body {font:13px Arial, Helvetica, sans-serif;}
+	
+	#pic-photos img, #fl-photos img {margin-right:10px;margin-bottom:10px;}
+	
+	#sc-gist {margin-top:10px;font:11px/16px Arial,sans-serif normal;overflow: hidden;position:relative;border:1px solid #bebebe;padding:10px;display:none;}
+	#sc-gist > div{}
+	#sc-gist .sc-rt{float: left;width: 75%;margin-left: 10px;}
+	#pd-imgs {float:left;}
+	#pd-imgs img {width:100px;border:1px solid #ccc;display:none}
+	#pd-imgs img:first-child{display:inline-block;}
+	#pd-title {font-size:13px;}
+	#pd-url {color:#666}
+	.pd-np{padding:5px 0px}
+	#pd-pre, #pd-nt {background:url(icons.gif) no-repeat scroll 0px -83px transparent;width:25px;height:22px;display:inline-block;text-indent:-1000px;}
+	#pd-nt {background-position:-25px -83px;margin-left: -3px;}
+	#pd-nt.dis {background-position:-75px -83px;cursor:default;}
+	#pd-pre.dis {background-position:-50px -83px;cursor:default;}
+	.pd-tn {padding:5px 0 0px 0;line-height:24px;}
+	.pd-tn span {padding-right:5px;}
+	.pd-tn span:last-child{color:#999;}
+	#sc-cls {position: absolute;background: url('close.png') no-repeat 0px -31px transparent;width: 16px;height: 16px;
+			z-index: 1;top: 2px;right: 5px;text-indent: -1000px;}
+	#sc-cls:hover {background-position:0px -47px}
+	
+	#throbber {padding:10px 0px;;display:none;}
+	#throbber div{background:url(PG.gif) no-repeat 0 0 scroll transparent;height:11px;width:16px;margin:0px auto;}
+	#imgThrobber {padding:10px 0px;;display:none;}
+	#imgThrobber div{background:url(PG.gif) no-repeat 0 0 scroll transparent;height:11px;width:16px;margin:0px auto;}
+	
+	#samples {padding:10px;width:52%}
+	#samples a {display:block;text-decoration:none;margin-bottom:2px;padding:2px 0px;}
+	#samples a:hover {background-color:#C8F2FB}
+</style>
+</head>
+<body>
+	<div id="pageContent" class="pageContent">
+            <div class="pageWidth">
+                 <div style="width: 80%;margin: 0px auto;margin-top:50px;">
+	                 <div style="border:1px solid #ccc;padding:20px;">
+	                     <h3 style="padding-bottom:30px">URL Parser</h3>
+	                     <input type="text" style="width:500px;padding:5px;margin-right:10px;" value="" id="startChat" />
+						 <a href="javascript:;" id="parse">Show Gist</a>
+						 <div id="samples" >
+						 	<h4>Use this sample URLs</h4>
+							<span style="color:#999;font-size:11px;padding-bottom:5px;display:block;">Click the below URLs to see the Gist of the Site.</span>
+						 	<a href="javascript:;">http://vimeo.com/album/159627/video/7545734</a>
+							<a href="javascript:;">www.linkedin.com/today/se/editorspicks?0815</a>
+							<a href="javascript:;">http://www.ebay.com/itm/290758424329#ht_853wt_1139</a>
+							<a href="javascript:;">http://www.espncricinfo.com/</a>
+							<a href="javascript:;">http://allaboutfrogs.org/</a>
+							<a href="javascript:;">http://www.nytimes.com/2012/08/18/us/politics/ryan-has-ear-of-washingtons-conservative-establishment.html?_r=1&hp</a>
+						 	<a href="javascript:;">www.santaclaraca.gov</a>
+							<a href="javascript:;">http://sutter.ca.campusgrid.net/home </a>
+							<a href="javascript:;">http://fiatspider.com/</a>
+							<a href="javascript:;">http://www.indiatimes.com/topic/Independence_Day</a>
+						 </div>
+						 <div style="width:52%;">
+						 	<div id="throbber"><div></div></div>
+                             <div id="response"></div>
+	                         <div id="sc-gist">
+	                             <a href="javascript:;" id="sc-cls">Close</a>
+	                             <div id="pd-imgs"></div>
+	                             <div class="sc-rt">
+	                                 <div id="pd-title"><h4></h4></div>
+	                                 <div id="pd-url"></div>
+	                                 <div id="pd-desc"></div>
+	                                 <div class="pd-tn">
+	                                     <span><a href="javascript:;" id="pd-pre">Previous</a>
+										 <a href="javascript:;" id="pd-nt">Next</a></span>
+	                                     <span id="pd-imgCnt">1 of </span>
+	                                     <span>Choose a Thumbnail</span>
+	                                 </div>
+	                                 <div class="pd-np">
+	                                     <input type="checkbox" id="sc-nopic" name="nopicture" value="true" class="">
+	                                     <label for="sc-nopic">
+	                                         No Thumbnail
+	                                     </label>
+	                                 </div>
+	                                 <!--div id="pd-video"></div-->
+	                             </div>
+	                         </div>
+	                     </div>
+	                 </div>
+				</div>
+			</div>
+	</div>
+	<script type="text/javascript" src="index.js"></script>
+</body>
+</html>
