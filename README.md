@@ -3,6 +3,8 @@ PHP Rich Content Embedder
 
 This plugin will embed the rich content from any 3rd party site into your website. This will scrape the content from the provided URL and fetch all the below listed fields. 
 
+This is similar to Facebook wall URL posting feature, where user entered URL will be used to fetch Rich Content from the site and embed into Facebook wall.
+
 
 Dynamic Rich Content
 --------------------------------
